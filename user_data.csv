@@ -1,0 +1,5 @@
+userid,name,email,card,phone,zip,pref,local_address
+0001,test1,test1@email.com,1111-1111-1111-1111,03-1111-1111,124-1234,tokyo,minatoku 1-1-1
+0002,test2,test2@email.com,1111-1111-1111-1111,03-1111-1111,123-1234,tokyo,minatoku 1-1-1
+0003,test3,test3@email.com,1111-1111-1111-1111,03-1111-1111,123-1234,tokyo,minatoku 1-1-1
+0004,test4,test4@email.com,1111-1111-1111-1111,03-1111-1111,123-1234,kanagawa,minatoku 1-1-1
