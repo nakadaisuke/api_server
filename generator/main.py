@@ -7,7 +7,7 @@ delete_list = ["/user"]
 
 def get_test():
     for i in user_list:
-        url = "http://" + os.getenv("url") + i
+        url = os.getenv("url") + i
         r = requests.get(url)
         data = r.json()
 
@@ -19,7 +19,7 @@ def get_test():
         time.sleep(1)
 
     for i in service_list:
-        url = "http://" + os.getenv("url") + i
+        url = os.getenv("url") + i
         r = requests.get(url)
         data = r.json()
 
@@ -33,7 +33,7 @@ def get_test():
 
 def post_test():
     for i in post_list:
-        url = "http://" + os.getenv("url") + i
+        url = os.getenv("url") + i
         data = {"userid":"0004","name":"test name","email":"test@test.com","card":"1111-2222-3333-4444","phone":"03-1234-5678","zip": "1234566","pref": "tokyo", "local_address": "123 1231 123"}
         json_data = json.dumps(data)
 
@@ -49,7 +49,7 @@ def post_test():
 
 def delete_test():
     for i in delete_list:
-        url = "http://" + os.getenv("url") + i + "/0004"
+        url = os.getenv("url") + i + "/0004"
         r = requests.delete(url)
         data = r.json()
 
