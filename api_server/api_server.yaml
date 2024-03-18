@@ -18,7 +18,7 @@ spec:
   spec:
    containers:
     - name: api-test
-      image: harbor-portal.daisuke.mydistributed.cloud/dnakajima/api-server:1.0 
+      image: harbor-portal.daisuke.mydistributed.cloud/dnakajima/api-server:1.1
       ports:
       - containerPort: 8080
     - name: svc-client
