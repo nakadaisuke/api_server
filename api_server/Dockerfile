@@ -2,6 +2,8 @@ FROM ubuntu
 COPY ./main.py /home
 COPY ./user_data.csv /home
 
+RUN chmod 666 /home/user_data.csv
+
 RUN apt-get update \
  && apt-get install -y \
   python3 \
