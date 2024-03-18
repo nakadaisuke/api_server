@@ -20,7 +20,7 @@ spec:
     - name: api-test
       image: harbor-portal.daisuke.mydistributed.cloud/dnakajima/api-server:1.0 
       ports:
-      - containerPort: 80
+      - containerPort: 8080
     - name: svc-client
       image: harbor-portal.daisuke.mydistributed.cloud/library/netutils:1.5
 
@@ -37,6 +37,6 @@ spec:
   - name: "http-port"
     protocol: "TCP"
     port: 80
-    targetPort: 80
+    targetPort: 8080
  selector:
   app: api-test

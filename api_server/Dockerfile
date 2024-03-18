@@ -1,6 +1,6 @@
 FROM ubuntu
-COPY ./main.py
-COFY ./user_data.csv
+COPY ./main.py /
+COPY ./user_data.csv /
 
 RUN apt-get update \
  && apt-get install -y \
