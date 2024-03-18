@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-generator
+spec:
+  selector:
+    matchLabels:
+      app: api-generator
+   annotations:
+    ves.io/wingman-injection-mode: disable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: api-generator
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: main
+        image: harbor-portal.daisuke.mydistributed.cloud/dnakajima/api-generator:1.1 
+        env:
+        - name: url 
+          value: "https://api-test.daisuke.mydistributed.cloud"
