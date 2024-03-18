@@ -1,6 +1,6 @@
 FROM ubuntu
-COPY ./main.py /
-COPY ./user_data.csv /
+COPY ./main.py /home
+COPY ./user_data.csv /home
 
 RUN apt-get update \
  && apt-get install -y \
@@ -13,4 +13,4 @@ RUN pip3 install --no-cache-dir \
   fastapi \
   uvicorn
 
-CMD ["python3", "./main.py"]
+CMD ["python3", "/home/main.py"]
