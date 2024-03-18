@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 app = FastAPI()
-filename = "user_data.csv"
+filename = "/home/user_data.csv"
 
 class Item(BaseModel):
     userid: str
